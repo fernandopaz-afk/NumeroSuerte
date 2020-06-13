@@ -7,13 +7,28 @@ ListaDobleEnlazada suerte = new ListaDobleEnlazada();
    Random c = new Random();
 int a=0,b,opc,elem;
 
-do{
+
+for(int i=1;i<=5;i++){
+System.out.println("Igresa un numero");
+a=Integer.parseInt(leer.readLine());
+suerte.agregarAlInicio(new Nodo<Integer>(a));
+}
+
+
+do{   
+System.out.println("Desea agregar otro numero 1.-Si 2.-No");
+opc=Integer.parseInt(leer.readLine());
+if(opc==1){
 System.out.println("Ingresa un numero");
 a=Integer.parseInt(leer.readLine());
 suerte.agregarAlInicio(new Nodo<Integer>(a));
-System.out.println("Desea agregar otro numero 1.-Si 2.-No");
-opc=Integer.parseInt(leer.readLine());
+}
+
 }while(opc==1);
+
+
+
+
 System.out.println("*****TUS NUMEROS SON*****");
 System.out.println(suerte.toStringReverse());
 System.out.println(suerte);
